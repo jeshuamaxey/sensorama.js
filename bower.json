@@ -1,0 +1,30 @@
+{
+  "name": "cardboard-lib",
+  "version": "0.0.1",
+  "authors": [
+    "Jeshua Maxey <me@jeshua.co>"
+  ],
+  "description": "jQuery for porn",
+  "main": "dist/cardboard-lib.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "google",
+    "cardboard",
+    "three.js",
+    "virtual",
+    "reality"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "threejs": "*"
+  }
+}
