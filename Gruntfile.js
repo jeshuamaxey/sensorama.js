@@ -3,7 +3,10 @@ module.exports = function(grunt) {
     uglify: {
       sensorama: {
         files: {
-          'build/sensorama.min.js': ['src/sensorama.js']
+          'build/sensorama.min.js': [
+            'src/third-party/*.js',
+            'src/sensorama.js'
+          ]
         }
       }
     },
@@ -11,7 +14,8 @@ module.exports = function(grunt) {
     jshint: {
       files: [
         'Gruntfile.js',
-        'src/*.js',
+        'src/**/*.js',
+        '!src/third-party/*.js',
         'test/*.js',
         '!test/karma.conf.js'
       ]
@@ -33,7 +37,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('watch', ['karma:dev']);
+  grunt.registerTask('watch', ['jshint', 'build', 'karma:dev']);
   
   grunt.registerTask('build', ['uglify:sensorama']);
   grunt.registerTask('default', ['build']);

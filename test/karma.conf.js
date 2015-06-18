@@ -6,12 +6,13 @@ module.exports= function(config) {
 
     // frameworks to use
     frameworks: [
-      'chai',
       'jasmine'
     ],
 
     // list of files / patterns to load in the browser
     files: [
+      'bower_components/threejs/build/three.js',
+      'src/third-party/*.js',
       'src/sensorama.js',
       'test/spec.js'
     ],
@@ -56,9 +57,9 @@ module.exports= function(config) {
     captureTimeout: 5000,
 
     // Auto run tests on start (when browsers are captured) and exit
-    singleRun: false,
+    singleRun: false
 
-    // report which specs are slower than 500ms
-    reportSlowerThan: 500
+    // report which specs are slower than 700ms
+    // reportSlowerThan: 700
   });
 };
