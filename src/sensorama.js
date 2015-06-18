@@ -1,6 +1,5 @@
 (function(window){
     'use strict';
-    console.log('help me')
     /*
      * returns the Sensorama object to be attached to the global scope
      */
@@ -121,7 +120,7 @@
     }
 
     // if we don't have THREE.js, log an error to the console
-    if (typeof(THREE) !== 'undefined') {
+    if (typeof(THREE) === 'undefined') {
       console.error('Sensorama requires THREE.js to be defined: '+
         'https://threejs.org');
     }
